@@ -3,11 +3,16 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="py-3 text-center bg-[linear-gradient(to_right,#FCD6ff,#29D8FF,#FFFD80,#F89ABF,#FCD6FF)]">
+    <div className="py-3 text-center bg-gradient-to-r from-[#29D8FF] via-[#29D8FF] via-[#FFFD80] via-[#F89ABF] to-[#FCD6FF]">
       <div className="container">
-        <Link href="#" className="underline underline-offset-4 font-medium">
-          Explore the demo
-        </Link>
+        <p className="font-medium">
+          <span className="hidden sm:inline">
+            Introducing a completely redesigned interface -{" "}  
+          </span>
+          <Link href="#" className="underline underline-offset-4 font-medium">
+             Explore the demo
+          </Link>
+        </p>
       </div>
     </div>
   );

@@ -1,7 +1,10 @@
 import Banner from "@/components/Banner";
+import FAQ from "@/components/FAQ";
+import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import Navbar from "@/components/Navbar";
+import ProductShowcase from "@/components/ProductShowcase";
 import Image from "next/image";
 
 export default function Home() {
@@ -11,6 +14,9 @@ export default function Home() {
       <Navbar></Navbar>
       <Hero></Hero>
       <LogoTicker></LogoTicker>
+      <Features></Features>
+      <ProductShowcase></ProductShowcase>
+      <FAQ></FAQ>
     </>
   );
 }

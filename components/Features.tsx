@@ -1,5 +1,7 @@
 import React from "react";
 import EcosystemIcon from "../public/ecosystem.svg";
+import PlusIcon from "../public/plus.svg"
+import InstaIcon from "../public/insta.svg"
 
 const features = [
   {
@@ -19,6 +21,8 @@ const features = [
   },
 ];
 
+const icons = [EcosystemIcon, InstaIcon, PlusIcon];
+
 const Features = () => {
   return (
     <div className="bg-black text-white py-[72px] sm:py-24">
@@ -34,13 +38,13 @@ const Features = () => {
           </p>
         </div>
         <div className="mt-16 flex flex-col gap-4 sm:flex-row ">
-          {features.map(({ title, description }) => (
+          {features.map(({ title, description }, index) => (
             <div
               key={title}
               className="border border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1 sm:py-12 lg:py-24 "
             >
-              <div className="inline-flex mx-auto h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-                <EcosystemIcon></EcosystemIcon>
+              <div className="inline-flex mx-auto h-14 w-14 bg-white text-black justify-center items-center rounded-xl">
+              {React.createElement(icons[index % icons.length])}
               </div>
               <h3 className="mt-6 font-bold">{title}</h3>
               <p className="mt-2 text-white/70">{description}</p>

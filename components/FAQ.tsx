@@ -11,12 +11,12 @@ const FAQ = () => {
   return (
     <div className="bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black">
       <div className="container">
-        <h2 className="text-center text-5xl font-bold tracking-tighter py-20">
+        <h2 className="text-center text-5xl font-bold tracking-tighter py-20 sm:text-6xl sm:max-w-[648px] mx-auto">
           Frequently asked questions
         </h2>
 
         <div className="mt-12">
-          <div className="">
+          <div className="sm:max-w-[648px] mx-auto">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1" className="py-2">
                 <AccordionTrigger>

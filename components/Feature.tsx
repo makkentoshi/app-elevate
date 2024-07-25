@@ -9,7 +9,7 @@ const Feature = ({
   title: string;
   description: string;
 }) => {
-  const offsetX = useMotionValue(0);
+  const offsetX = useMotionValue(-100);
   const offsetY = useMotionValue(0);
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}, black, transparent)`;
   const border = useRef<HTMLDivElement | null>(null);
@@ -17,7 +17,7 @@ const Feature = ({
     const updateMousePos = (e: MouseEvent) => {
       if (!border.current) return;
       const borderRect = border.current?.getBoundingClientRect();
-      offsetX.set(e.x- borderRect.x);
+      offsetX.set(e.x - borderRect.x);
       offsetY.set(e.y - borderRect.y);
     };
     window.addEventListener("mousemove", updateMousePos);
